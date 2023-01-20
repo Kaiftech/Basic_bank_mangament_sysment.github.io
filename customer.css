@@ -1,0 +1,110 @@
+body {
+  font-family: "Roboto", sans-serif;
+  overflow: scroll;
+  background-color: #74becd; /* base color */
+  color: #333; /*Dark grey for text */
+}
+#rupee-symbol {
+  font-size: 50px;
+  position: absolute;
+  top: 51px;
+  left: 41px;
+  padding: 28px;
+  margin: 20px;
+  text-shadow: 0px 0px 10px #333333;
+  background: linear-gradient(to right, #dc21e2, #39a5a8);
+  border-radius: 50%;
+  background-size: 200% auto;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  transition: all 0.2s;
+  animation: rotate 1s ease-in-out infinite, pulse 3s infinite,
+    bg-change 2s ease-in-out infinite, float 4s ease-in-out infinite, flip 6s infinite;
+  text-transform:uppercase;
+  box-shadow: 10px 10px 20px rgb(163, 43, 163);  
+}
+@keyframes flip {
+  0% {
+      transform: rotateY(0deg);
+  }
+  100% {
+      transform: rotateY(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bg-change {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.bg-light {
+  background-color: #74becd !important; /* complement color */
+  color: #333; /*Dark grey for text */
+}
+
+.navbar-brand {
+  font-family: "Sansita Swashed", cursive;
+  font-size: 1.5rem;
+  color: #333 !important; /*Dark grey for text */
+}
+
+.nav-link {
+  color: #333 !important; /*Dark grey for text */
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.nav-link:hover,
+.my-info,
+.btn-info {
+  background-color: #74becd; /* complement color */
+  color: #fff;
+  padding: 1rem 1.2rem;
+  margin-left: 5px;
+  padding: 0.75rem;
+  transition: all 0.3s;
+}
+.btn-info {
+  background-color: #5071dd;
+  color: #333 !important; /*Dark grey for text */
+  background: rgb(149, 206, 255);
+} 
+.btn-info.custom-file-control:before,
+.btn.btn-info {
+ color:#03a9f4;
+ background-color:rgb(219, 121, 248);
+ border-color:rgb(255, 8, 8)
+}
